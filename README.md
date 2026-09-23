@@ -87,6 +87,7 @@ Most CDPs are built for enterprises juggling hundreds of integrations. **Our pla
 *Full details on datasets, marketing logic, and sources → [`docs/notes/segments.md`](docs/notes/segments.md)*
 
 ## How It Works
+```
 Store connects data (CSV / Postgres)
 ↓
 LLM maps columns → platform schema
@@ -98,8 +99,6 @@ Eligible segments run (ML / rule-based)
 KPIs + Customer 360 generated
 ↓
 Launch targeted campaigns by segment
-
+```
 
 ---
-
-<p align="center">Built by <a href="https://github.com/Sohaib-Haider">Sohaib Haider</a></p>
