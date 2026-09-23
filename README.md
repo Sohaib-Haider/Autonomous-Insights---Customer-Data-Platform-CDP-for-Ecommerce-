@@ -2,6 +2,8 @@
 CDP focused only on ecommerce. Lets an ecommerce store connect their customer data, get ML/rule-based customer segmentation, KPIs, a Customer 360 view, and run multi-channel campaigns (email/SMS/WhatsApp) via a drag-and-drop workflow builder.
 
 ## File Map:
+
+```
 intellimerchant/
 ├── data_prep/                     # offline, one-time work before the app runs
 │   ├── raw/                       # original 7 Kaggle datasets
@@ -43,6 +45,7 @@ intellimerchant/
 │   └── README.md                  # full project context for devs/copilot
 │
 └── docker-compose.yml             # container orchestration (backend + db, etc.)
+```
 
 ## Data Foundation
 - 7 raw Kaggle ecommerce datasets, pairwise merged/transformed into 9 (or 10, TBD) clean per-segment training datasets, all normalized to look like one ecommerce store's data
