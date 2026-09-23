@@ -12,7 +12,7 @@
 ## File Map:
 
 ```
-intellimerchant/
+CDP/
 ├── data_prep/                     # offline, one-time work before the app runs
 │   ├── raw/                       # original 6 Kaggle datasets
 │   ├── transform/                 # merging + transformation scripts/notebooks
@@ -58,9 +58,9 @@ intellimerchant/
 └── docker-compose.yml             # container orchestration (backend + db, etc.)
 ```
 
-## What is IntelliMerchant?
+## Overview
 
-Most CDPs are built for enterprises juggling hundreds of integrations. **IntelliMerchant strips that down to what an ecommerce store actually needs** — connect your data, get predictive customer segments, and run targeted campaigns, without the enterprise bloat.
+Most CDPs are built for enterprises juggling hundreds of integrations. **Our platform strips that down to what an ecommerce store actually needs** — connect your data, get predictive customer segments, and run targeted campaigns, without the enterprise bloat.
 
 ## Core Capabilities
 
@@ -99,24 +99,6 @@ KPIs + Customer 360 generated
 ↓
 Launch targeted campaigns by segment
 
-
-Full pipeline breakdown → [`docs/notes/architecture.md`](docs/notes/architecture.md)
-
-## Tech Stack
-
-- **Backend:** Django + Django REST Framework
-- **Database:** PostgreSQL
-- **ML:** scikit-learn, pandas
-- **AI Mapping:** Claude API
-- **Frontend:** TBD
-
-## Project Structure
-
-See [`CLAUDE.md`](CLAUDE.md) for the full repo layout and dev context.
-
-## Status
-
-Final Year Project — actively in development at FAST NUCES Lahore.
 
 ---
 
