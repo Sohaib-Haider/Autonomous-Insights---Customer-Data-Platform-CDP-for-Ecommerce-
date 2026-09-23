@@ -6,7 +6,7 @@ CDP focused only on ecommerce. Lets an ecommerce store connect their customer da
 ```
 intellimerchant/
 ├── data_prep/                     # offline, one-time work before the app runs
-│   ├── raw/                       # original 7 Kaggle datasets
+│   ├── raw/                       # original 6 Kaggle datasets
 │   ├── transform/                 # merging + transformation scripts/notebooks
 │   ├── processed/                 # final clean per-segment training datasets
 │   ├── training/                  # scripts that train each ML model
@@ -48,12 +48,21 @@ intellimerchant/
 ```
 
 ## Data Foundation
-- 7 raw Kaggle ecommerce datasets, pairwise merged/transformed into 9 (or 10, TBD) clean per-segment training datasets, all normalized to look like one ecommerce store's data
+- 6 raw Kaggle ecommerce datasets, pairwise merged/transformed into 9 clean per-segment training datasets, all normalized to look like one ecommerce store's data
 - ML models trained per segment that requires one (some segments are rule-based, no ML)
 - Each segment has a fixed `required_fields` schema (config-driven, not hardcoded) — a segment only becomes available to a store if their ingested data satisfies its schema
 
-## Segments (9–10, list TBD, examples)
-Purchase Intent, Future High-Value/CLV, Discount Responsive, Churn-Risk, Channel Preference, Replenishment-Ready, Cross-Sell Opportunity, Seasonal Purchase, Cart Abandoners
+## Segments 9
+
+Predicted Purchase Intent
+Future High-Value / CLV
+Discount Responsive
+Churn-Risk
+Channel Preference
+Replenishment-Ready
+Cross-Sell Opportunity
+Seasonal Purchase
+Cart Abandoners
 
 ## Ingestion
 Two options: CSV upload, or connect their own Postgres DB (read-only source). Both paths converge into the same in-memory pandas pipeline — no per-source branching logic.
@@ -81,8 +90,5 @@ Frontend: TBD, will consume backend via REST APIs
 
 ## Folder Structure
 Include the backend folder structure (apps split by domain: customers, segments, campaigns, analytics, users; config/, core/, ml_models/), and leave frontend/ as an empty placeholder folder for now.
-
-## Status / Open Decisions
-Note as open/unconfirmed: exact segment count (9 vs 10), whether workflow builder needs more node types, exact KPI list.
 
 Write it in clean developer-README style — headers, short bullets, code blocks for structure/stack — no fluff, no marketing tone.
