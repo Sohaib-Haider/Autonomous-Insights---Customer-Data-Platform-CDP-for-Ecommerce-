@@ -11,6 +11,7 @@
 ---
 ## File Map:
 
+```
 intellimerchant/
 ├── data_prep/                     # offline, one-time work before the app runs
 │   ├── raw/                       # original 6 Kaggle datasets
@@ -55,6 +56,7 @@ intellimerchant/
 │   └── diagrams/
 │
 └── docker-compose.yml             # container orchestration (backend + db, etc.)
+```
 
 ## What is IntelliMerchant?
 
