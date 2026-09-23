@@ -1,9 +1,16 @@
-## Overview
-CDP focused only on ecommerce. Lets an ecommerce store connect their customer data, get ML/rule-based customer segmentation, KPIs, a Customer 360 view, and run multi-channel campaigns (email/SMS/WhatsApp) via a drag-and-drop workflow builder.
+# Customer Data Platform (CDP) for Ecommerce
 
+**A Customer Data Platform (CDP) built exclusively for ecommerce — turn raw customer data into predictive segments and automated multi-channel campaigns.**
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Django](https://img.shields.io/badge/Django-REST_Framework-092E20?logo=django)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql)
+![Status](https://img.shields.io/badge/Status-In_Development-yellow)
+![FYP](https://img.shields.io/badge/FAST_NUCES-Final_Year_Project-red)
+
+---
 ## File Map:
 
-```
 intellimerchant/
 ├── data_prep/                     # offline, one-time work before the app runs
 │   ├── raw/                       # original 6 Kaggle datasets
@@ -42,53 +49,39 @@ intellimerchant/
 ├── frontend/                      # empty for now, framework TBD
 │
 ├── docs/
-│   └── README.md                  # full project context for devs/copilot
+│   ├── submission/
+│   ├── notes/
+│   ├── decisions/
+│   └── diagrams/
 │
 └── docker-compose.yml             # container orchestration (backend + db, etc.)
-```
 
-## Data Foundation
-- 6 raw Kaggle ecommerce datasets, pairwise merged/transformed into 9 clean per-segment training datasets, all normalized to look like one ecommerce store's data
-- ML models trained per segment that requires one (some segments are rule-based, no ML)
-- Each segment has a fixed `required_fields` schema (config-driven, not hardcoded) — a segment only becomes available to a store if their ingested data satisfies its schema
+## What is IntelliMerchant?
 
-## Segments 9
+Most CDPs are built for enterprises juggling hundreds of integrations. **IntelliMerchant strips that down to what an ecommerce store actually needs** — connect your data, get predictive customer segments, and run targeted campaigns, without the enterprise bloat.
 
-Predicted Purchase Intent
-Future High-Value / CLV
-Discount Responsive
-Churn-Risk
-Channel Preference
-Replenishment-Ready
-Cross-Sell Opportunity
-Seasonal Purchase
-Cart Abandoners
+## Core Capabilities
 
-## Ingestion
-Two options: CSV upload, or connect their own Postgres DB (read-only source). Both paths converge into the same in-memory pandas pipeline — no per-source branching logic.
+| Feature | What it does |
+|---|---|
+| Flexible Ingestion | Upload a CSV or connect your Postgres DB directly |
+| AI Column Mapping | LLM auto-maps your messy column names to the platform's schema |
+| 9 Predictive Segments | ML + rule-based models identify purchase intent, churn risk, CLV, and more |
+| Customer 360 View | Every customer's full profile — segments, KPIs, behavior, in one place |
+| Omni-Channel Campaigns | Drag-and-drop workflow builder — Email, WhatsApp, SMS |
 
-## Column Mapping
-Claude API (LLM) maps the store's arbitrary column names to the platform's required schema fields (e.g. "petrol average" → "fuel_mileage").
+## The 9 Segments
 
-## Cleaning & Storage
-Data is cleaned/transformed in-memory (pandas), then persisted once into the platform's own internal multi-tenant Postgres DB. The platform does NOT write back to the store's connected database — their DB is read-only input.
+1. Predicted Purchase Intent
+2. Future High-Value / Predicted CLV
+3. Discount Responsive
+4. Predicted Churn-Risk
+5. Predicted Channel Preference
+6. Predicted Replenishment-Ready
+7. Predicted Cross-Sell Opportunity
+8. Predicted Seasonal Purchase
+9. Predicted Cart Abandoners
 
-## Segmentation & KPIs
-After mapping, check which segments the store's fields satisfy → run those segments (ML or rule-based) → save results to `customer_segments` table. KPIs computed the same way (from raw + ML outputs) → `customer_kpis` table. Customer 360 view = a joined view over customer + segments + KPIs, not separately stored raw data.
+*Full details on datasets, marketing logic, and sources → [`docs/notes/segments.md`](docs/notes/segments.md)*
 
-## Campaigns
-User picks a segment (or custom filter) → builds a workflow with drag-and-drop nodes: send-message (with variables like {{customer_name}}), wait/delay, channel-select (WhatsApp / SMS / email only).
-
-## Platform Users
-Separate `users` app for the ecommerce store's own account: signup/login/store profile. Distinct from the ingested end-customer data.
-
-## Tech Stack
-Backend: Django + DRF (Python chosen for ML/data ecosystem — pandas/sklearn are C-backed, not a performance bottleneck for this use case)
-DB: PostgreSQL
-LLM: Gemini flash free API
-Frontend: TBD, will consume backend via REST APIs
-
-## Folder Structure
-Include the backend folder structure (apps split by domain: customers, segments, campaigns, analytics, users; config/, core/, ml_models/), and leave frontend/ as an empty placeholder folder for now.
-
-Write it in clean developer-README style — headers, short bullets, code blocks for structure/stack — no fluff, no marketing tone.
+## How It Works
