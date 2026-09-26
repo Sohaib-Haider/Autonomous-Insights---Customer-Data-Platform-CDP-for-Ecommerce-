@@ -13,14 +13,14 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 | Segment | Source Dataset (Kaggle) |
 | --- | --- |
 | Predicted Purchase Intent | [eCommerce behavior data from multi category store](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) |
-| Future High-Value / Predicted CLV | [Online Retail II](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci) |
+| Future High-Value / CLV | [Online Retail II](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci) |
 | Discount Responsive | [Predicting Coupon Redemption](https://www.kaggle.com/datasets/vasudeva009/predicting-coupon-redemption) |
-| Predicted Churn-Risk | [E-commerce Customer Churn](https://www.kaggle.com/datasets/samuelsemaya/e-commerce-customer-churn) |
-| Predicted Channel Preference | [E-commerce multichannel direct messaging](https://www.kaggle.com/datasets/mkechinov/direct-messaging) |
-| Predicted Replenishment-Ready | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
-| Predicted Cross-Sell Opportunity | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
-| Predicted Seasonal Purchase | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
-| Predicted Cart Abandoners | [eCommerce behavior data from multi category store](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) |
+| Churn-Risk | [E-commerce Customer Churn](https://www.kaggle.com/datasets/samuelsemaya/e-commerce-customer-churn) |
+| Channel Preference | [E-commerce multichannel direct messaging](https://www.kaggle.com/datasets/mkechinov/direct-messaging) |
+| Replenishment-Ready | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
+| Cross-Sell Opportunity | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
+| Seasonal Purchase | [Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey) |
+| Cart Abandoners | [eCommerce behavior data from multi category store](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) |
 
 ---
 
@@ -39,7 +39,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 2. Future High-Value / Predicted CLV
+## 2. Future High-Value / CLV
 
 **Dataset:** [Kaggle — Online Retail II](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci)
 
@@ -68,7 +68,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 4. Predicted Churn-Risk
+## 4. Churn-Risk
 
 **Dataset:** [Kaggle — E-commerce Customer Churn](https://www.kaggle.com/datasets/samuelsemaya/e-commerce-customer-churn)
 
@@ -83,7 +83,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 5. Predicted Channel Preference
+## 5. Channel Preference
 
 **Dataset:** [Kaggle — E-commerce multichannel direct messaging](https://www.kaggle.com/datasets/mkechinov/direct-messaging)
 
@@ -97,7 +97,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 6. Predicted Replenishment-Ready
+## 6. Replenishment-Ready
 
 **Dataset:** [Kaggle — Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey)
 
@@ -111,7 +111,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 7. Predicted Cross-Sell Opportunity
+## 7. Cross-Sell Opportunity
 
 **Dataset:** [Kaggle — Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey)
 
@@ -125,7 +125,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 8. Predicted Seasonal Purchase
+## 8. Seasonal Purchase
 
 **Dataset:** [Kaggle — Dunnhumby: The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey)
 
@@ -139,7 +139,7 @@ Every segment is tied to a real dataset so we can train ML models or build rules
 
 ---
 
-## 9. Predicted Cart Abandoners
+## 9. Cart Abandoners
 
 **Dataset:** [Kaggle — eCommerce behavior data from multi category store](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store)
 
